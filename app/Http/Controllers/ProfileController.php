@@ -36,8 +36,8 @@ class ProfileController extends Controller
      //create the cookie instance 
 
      $cookie = Cookie::make($name, $value, $minutes, $path, $domain, $secure, $httpOnly);
-
-    return response()->json($data)->withCookie($cookie);
+    
+    return response()->json($data, 200)->withCookie($cookie);
 
 
     }
